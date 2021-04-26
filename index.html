@@ -1,0 +1,143 @@
+<html>
+<head>
+<style>
+    body{
+        padding: 0;
+        margin: 0;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .header{
+        background-color: #37475A;
+        width: 100%;
+        height: 10%;
+    }
+    .logo{
+        width: 100%;
+        height: 60%;
+        margin-top: 1%;
+        cursor: pointer;
+    }
+    .page{
+        width: 100%;
+        margin-top: 4%;
+    }
+    .imageClass{
+        width: 30%;
+        height: 400px;
+        float: left;
+    }
+    #myImage{
+        position: absolute;
+        width: 30%;
+        height: 80%;
+        margin-left: 10%;
+        z-index: -1;
+    }
+    #time{
+        margin-left: 71%;
+        margin-top: 60%;
+        letter-spacing: 4px;
+        font-weight: 500;
+        color: white;
+    }
+    #heart{
+        position: absolute;
+        top: 48%;
+        left: 23%;
+        width: 50px;
+        height: 50px;
+        animation: animation1 5s linear 0s infinite alternate;
+        visibility: hidden;
+    }
+    @keyframes animation1{
+        0%   {transform: scale(1);}
+        25%  {transform: scale(1.25);}
+        50%  {transform: scale(1.5);}
+        75%  {transform: scale(1.25);}
+        100% {transform: scale(1);}
+    }
+    #heart-rate{
+        color: white;
+        visibility: visible;
+        margin-left: 80%;
+    }
+    #info{
+        margin-left: 40%;
+    }
+    .selection{
+        margin: 5% 0%
+    }   
+    .colors div{
+        padding: 2% 5%;
+        border-radius: 5px;
+        display: inline;
+        cursor: pointer;
+        margin-right: 1.5%;
+    }
+    .red{
+        background-color: #ca3d22;
+    }
+    .black{
+        background-color: #23211f;
+    }
+    .blue{
+        background-color: #565681;
+    }
+    .pink{
+        background-color: #e9c7be;
+    }
+    .purple{
+        background-color: #8a5362;
+    }
+    .features div{
+        padding: 2% 5%;
+        border-radius: 5px;
+        display: inline;
+        cursor: pointer;
+        margin-right: 1.5%;
+        background-color: #cfcfcf;
+    }
+    .buy{
+        background-color: #f48c06;
+        border: 1px solid orange;
+        padding: 15px 40px;
+        border-radius: 5px;
+        margin-top: 5%;
+    }
+</style>
+</head>
+<body onload="timer()">
+    <div class="header">
+        <img src="images/logo.svg" alt="amazon" class="logo">
+    </div>
+    <div class="page">
+        <div class="imageClass">
+            <img id="myImage" src="images/black.png" alt="">
+            <p id="time"></p>
+            <img id="heart" src="images/heart.png" alt="">
+            <span id="heart-rate"></span>
+        </div>
+        <div id="info">
+            <h1>FitBit 19 - The Smartest Watch</h1>
+            <div id="desc">
+                <p>The Smartest Watch The Smartest Watch The Smartest Watch</p>
+            </div>
+            <h3 class="selection">Select Colors</h3>
+            <div class="colors">
+                <div class="red" onclick="red()"></div>
+                <div class="black" onclick="black()"></div>
+                <div class="blue" onclick="blue()"></div>
+                <div class="pink" onclick="pink()"></div>
+                <div class="purple" onclick="purple()"></div>
+            </div>
+            <h3 class="selection">Features</h3>
+            <div class="features">
+                <div onclick="timer()">Time</div>
+                <div onclick="heartbeat()">Heart Rate</div>
+            </div>
+            <button class="buy">BUY NOW</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
